@@ -15,16 +15,11 @@ public class user {
         this.email = email;
         this.contactNumber = contactNumber;
         this.emergencyContact = emergencyContact;
-        
+
 
     }
 
     public void createEnquiry(){
-
-
-    }
-
-    public void enrolCourse(){
 
 
     }

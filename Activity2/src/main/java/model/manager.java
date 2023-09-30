@@ -16,5 +16,11 @@ public class manager extends user{
 
     }
     
+    public void manageEnquiry() {
+
+    }
+    public void closeEnquiry() {
+        
+    }
 
 }
