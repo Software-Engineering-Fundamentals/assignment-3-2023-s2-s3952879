@@ -17,8 +17,18 @@ public class course {
         this.coursePrice = coursePrice;
         this.courseDuration = courseDuration;
         this.refundAvailable = refundAvailable;
-        
+
     }
 
+    public course(String courseName, String courseCategory, String courseIntro,
+                String coursePrice, String courseDuration, boolean refundAvailable) {
+    this.courseName = courseName;
+    this.courseCategory = courseCategory;
+    this.courseIntro = courseIntro;
+    this.coursePrice = coursePrice;
+    this.courseDuration = courseDuration;
+    this.refundAvailable = refundAvailable;
+    
+    }
 }
 
