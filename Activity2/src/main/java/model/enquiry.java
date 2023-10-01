@@ -14,8 +14,8 @@ public class enquiry {
         this.response = response;
     }
 
-    public void accept(){
-
+    public void answer(){
+        
     }
 
     public void close() {
