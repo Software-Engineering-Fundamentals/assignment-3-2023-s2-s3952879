@@ -19,9 +19,9 @@ public class user {
 
     }
 
-    public void createEnquiry(){
-
-
+    public enquiry createEnquiry(){
+        enquiry query = new enquiry("contents", email);
+        return query;
     }
 
     public void registerCourse() {

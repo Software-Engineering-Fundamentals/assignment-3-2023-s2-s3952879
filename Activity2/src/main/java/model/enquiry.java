@@ -6,12 +6,12 @@ public class enquiry {
     private String userID; // linked to x user
 
     // constructor
-    public enquiry(String enquiryID, String contents, boolean open, String userID, String response) {
-        this.enquiryID = enquiryID;
+    public enquiry(String contents, String userID) {
+        this.enquiryID = "enquiryID";
         this.contents = contents;
-        this.open = open;
+        this.open = true;
         this.userID = userID;
-        this.response = response;
+        this.response = "";
     }
 
     public void setResponse(String response) {
