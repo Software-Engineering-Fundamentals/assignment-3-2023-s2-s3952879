@@ -16,6 +16,7 @@ public class enquiry {
         this.response = "";
 
         System.out.println("enquiry " + enquiryID + " has been created");
+        System.out.println("\"" + contents + "\"");
     }
 
     private String generateEnquiryID() {

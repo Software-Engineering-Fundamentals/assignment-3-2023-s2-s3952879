@@ -20,7 +20,7 @@ public class user {
     }
 
     public enquiry createEnquiry(){
-        enquiry query = new enquiry("contents", email);
+        enquiry query = new enquiry("How were we supposed to find the answer to q95 is test #28?", email);
         return query;
     }
 

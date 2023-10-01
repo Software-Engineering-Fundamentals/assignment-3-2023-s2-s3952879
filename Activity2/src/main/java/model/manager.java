@@ -17,7 +17,7 @@ public class manager extends user{
     }
     
     public void manageEnquiry(enquiry query) {
-        query.setResponse("");
+        query.setResponse("that question was easily answered if you had simply studied the week 107 content for the course that test pertains to");
         query.answer();
     }
 
