@@ -31,7 +31,10 @@ public class course {
     
     }
 
-    
+    public double getCoursePrice() {
+        return this.coursePrice;
+    }
+   
 
 
 }

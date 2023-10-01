@@ -19,7 +19,16 @@ public class fee {
         
     }   
     
-    public void calculateFee() {
+    public void isStudent() {
 
     }
+
+    public void calculateFee() {
+        if (this.isStudent == false) {
+            this.amount = 50;
+        } else {
+            this.amount = 500;
+            commissionFee = (0.02*amount);
+        }
+    }   
 }

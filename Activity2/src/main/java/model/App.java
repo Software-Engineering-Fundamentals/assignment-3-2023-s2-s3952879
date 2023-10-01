@@ -29,10 +29,21 @@ public class App {
         // user provides correct details
         // asumes there is error checking for each of the details  
 
-        // user prompted for personal details
-        user testUser = new user("Alex", "Melbourne", "01-01-2020", "test@gmail.com", "0404 444 443", "0404 444 443");
+        // user prompted for personal details and instructor ID
+        instructor newInstructor = new instructor("AZ33","Alex", "Melbourne", "01/01/2000", "test@gmail.com", "0404 000 000", "0404 000 000");
 
+        // system is generating a login and password for the instructor
+        String login = newInstructor.generateLogin();
+        String password = newInstructor.generatePass();
+
+        // system is setting the password to the unique instructor object
+        newInstructor.setLogin(login);
+        newInstructor.setPass(password);
+  
         // system prompts for payment
+        System.out.println(newInstructor.getInstructorID());
+        
+        
 
 
         // payment successful
