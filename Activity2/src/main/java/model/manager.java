@@ -16,11 +16,13 @@ public class manager extends user{
 
     }
     
-    public void manageEnquiry() {
-
+    public void manageEnquiry(enquiry query) {
+        query.setResponse("");
+        query.answer();
     }
-    public void closeEnquiry() {
-        
+
+    public void closeEnquiry(enquiry query) {
+        query.close();
     }
 
 }
