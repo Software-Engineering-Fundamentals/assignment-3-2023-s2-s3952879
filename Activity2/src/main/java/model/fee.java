@@ -18,6 +18,7 @@ public class fee {
     public void payFee() {
 
     }
+    
     public void calculateFee() {
 
     }
