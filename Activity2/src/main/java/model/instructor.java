@@ -6,7 +6,7 @@ public class instructor extends user {
     protected String login;
     protected String password;
 
-    public instructor(String name, String address, Date dob, String email, String contactNumber, String emergencyContact,
+    public instructor(String name, String address, String dob, String email, String contactNumber, String emergencyContact,
                         String instructorID, String login, String password) {
 
         super(name, address, dob, email, contactNumber, emergencyContact);

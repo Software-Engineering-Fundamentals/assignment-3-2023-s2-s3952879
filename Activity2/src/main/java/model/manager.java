@@ -6,7 +6,7 @@ public class manager extends user{
     protected String login;
     protected String password;
 
-    public manager(String name, String address, Date dob, String email, String contactNumber, String emergencyContact,
+    public manager(String name, String address, String dob, String email, String contactNumber, String emergencyContact,
                         String managerID, String login, String password) {
 
         super(name, address, dob, email, contactNumber, emergencyContact);
