@@ -14,6 +14,8 @@ public class enquiry {
         this.open = true;
         this.userID = userID;
         this.response = "";
+
+        System.out.println("enquiry " + enquiryID + " has been created");
     }
 
     private String generateEnquiryID() {
@@ -27,10 +29,10 @@ public class enquiry {
     }
 
     public void answer(){
-        System.out.println("The manager has respoded to your enquiry with the answer: " + response);
+        System.out.println("The manager has respoded to enquiry " + enquiryID + " with the answer: " + response);
     }
 
     public void close() {
-        System.out.println("this enquiry has been closed");
+        System.out.println("enquiry " + enquiryID + "has been closed");
     }
 }
