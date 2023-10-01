@@ -14,8 +14,12 @@ public class enquiry {
         this.response = response;
     }
 
-    public void answer(String answer){
-        System.out.println("The manager has respoded to your enquiry with the answer: " + answer);
+    public void setResponse(String response) {
+        this.response = response;
+    }
+
+    public void answer(){
+        System.out.println("The manager has respoded to your enquiry with the answer: " + response);
     }
 
     public void close() {
