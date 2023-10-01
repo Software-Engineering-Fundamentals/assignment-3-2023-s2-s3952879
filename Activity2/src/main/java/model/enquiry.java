@@ -14,11 +14,11 @@ public class enquiry {
         this.response = response;
     }
 
-    public void answer(){
-        
+    public void answer(String answer){
+        System.out.println("The manager has respoded to your enquiry with the answer: " + answer);
     }
 
     public void close() {
-        
+        System.out.println("this enquiry has been closed");
     }
 }
