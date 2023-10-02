@@ -58,6 +58,7 @@ public class App {
         newInstructor.setPass(password);
         
         // testing to see if login and password is generated correctly
+        System.out.println("Your instructor details are as follows");
         System.out.println("Your login is: " + newInstructor.getLogin());
         System.out.println("Your password is: " + newInstructor.getPassword());
 

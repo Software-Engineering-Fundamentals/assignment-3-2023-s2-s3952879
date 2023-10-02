@@ -33,5 +33,10 @@ public class fee {
     public double calculateComission(double coursePrice) {
         return (0.02*coursePrice);
     }
-    
+
+    public String payFee() {
+        String todaysDate = "20/20/2023";
+        
+        return todaysDate;
+    }
 }
