@@ -8,27 +8,30 @@ public class fee {
     private boolean isStudent; // 1 = student, 0 = instructor
 
 
-    public fee(String ID, double amount, double commissionFee, Date dob) {
+    public fee(String ID) {
         this.ID = ID;
-        this.amount = amount;
-        this.commissionFee = commissionFee;
-        this.dob = dob;
     }   
 
-    public void payFee() {
-        
-    }   
-    
-    public void isStudent() {
-
+    // instructor or student test, 1 for instructor, 0 for student
+    public boolean instructorOrStudent(user User){ 
+        if (User instanceof instructor) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
-    public void calculateFee() {
-        if (this.isStudent == false) {
-            this.amount = 50;
+    // instructor ID will be 10 digits long, and all students will be 6 digits long
+    public double calculateFee(boolean test, double coursePrice) {
+        if(test = true) {
+            return 50;
         } else {
-            this.amount = 500;
-            commissionFee = (0.02*amount);
+            this.amount = coursePrice;
+            return coursePrice;
         }
     }   
+    public double calculateComission(double coursePrice) {
+        return (0.02*coursePrice);
+    }
+    
 }

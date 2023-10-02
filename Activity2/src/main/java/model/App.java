@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class App {
     public static void main(String[] args) throws Exception {
         System.out.println("Hello, World!");
@@ -30,33 +32,42 @@ public class App {
 
         // user prompted for personal details and instructor ID
         instructor newInstructor = new instructor("AZ33","Alex", "Melbourne", "01/01/2000", "test@gmail.com", "0404 000 000", "0404 000 000");
+        String courseID = testCourse.getCourseID();
+        newInstructor.addCourse(courseID);
 
-        // System requests payment information by user
+        // create a fee object associtaed with instructor ID
+        fee Fee = new fee(newInstructor.getInstructorID());
 
-    
+        // system creates a fee based on whether the user is an instructor or student
+        boolean instructorCheck = Fee.instructorOrStudent(newInstructor);
+        // returns 1 if instructor, returns 0 if student, provide course price to calculate
+        // a student fee if necessary
+        double feeAmount = Fee.calculateFee(instructorCheck,testCourse.getCoursePrice());
+        
+        // System REQUESTS PAYMENT information by user, user provides payment information
+        newInstructor.setPayment("Credit Card: 5217 0000 0000 0000");
+
+        // ===========================
+        // After a Successful Payment
         // system is generating a login and password for the instructor
         String login = newInstructor.generateLogin();
         String password = newInstructor.generatePass();
 
-        newInstructor.setLogin(newInstructor.generateLogin());
-        System.out.println(newInstructor.getLogin());
-        newInstructor.setPass(newInstructor.generatePass());
-        System.out.println(newInstructor.getPassword());
-
-        // system is setting the password to the unique instructor object
+        // sets the generated login name and password to the instructor object
         newInstructor.setLogin(login);
         newInstructor.setPass(password);
-  
-        // system prompts for payment
-        System.out.println(newInstructor.getInstructorID());
-        System.out.println("Work");
-
         
+        // testing to see if login and password is generated correctly
+        System.out.println("Your login is: " + newInstructor.getLogin());
+        System.out.println("Your password is: " + newInstructor.getPassword());
 
-
-        // payment successful
-
-        // payment unsuccessful
+        // ==============================
+        // If the payment is Unsuccessful it will loop back to request payment
+        // If user wants to exit or cancel completely, the object will be deleted
+        // and stored data removed
+        testCourse = null;
+        newInstructor = null;
+        
         
 
 
