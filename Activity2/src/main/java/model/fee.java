@@ -1,52 +1,41 @@
-import java.sql.Date;
+import java.util.Date;
 
-public class fee {
-    private String ID;
+class Fee {
+    private int ID;
     private double amount;
-    private double commissionFee;
-    private Date dob;
-    private boolean isStudent; // 1 = student, 0 = instructor
-    private boolean paymentVerify;
 
-
-    public fee(String ID) {
+    public Fee(int ID, double amount) {
         this.ID = ID;
-    }   
-
-    // instructor or student test, 1 for instructor, 0 for student
-    public boolean instructorOrStudent(user User){ 
-        if (User instanceof instructor) {
-            return true;
-        } else {
-            return false;
-        }
+        this.amount = amount;
     }
 
-    // instructor ID will be 10 digits long, and all students will be 6 digits long
-    public double calculateFee(boolean test, double coursePrice) {
-        if(test = true) {
-            return 50;
-        } else {
-            this.amount = coursePrice;
-            return coursePrice;
-        }
-    }   
-    public double calculateComission(double coursePrice) {
-        return (0.02*coursePrice);
+    //calculator fee given instructor variable
+    public double calculateFee(Instructor instructor) {
+        return amount;
     }
-
-    // payment checking process, default value of true means valid payment information
+    // payment verification, set to true as default which is working
     public boolean verifyPayment() {
-        this.paymentVerify = true;
         return true;
     }
+    // date recorded for payment of fee 
+    public Date payFee() {
+        return new Date();
+    }
 
-    // payment successful or not
-    public int payFee() {
-        if(this.paymentVerify = true) {
-            return 1;
-        } else {
-            return 0;
-        }
+    // getter and setter methods
+    // ID
+    public int getID() {
+        return ID;
+    }
+    public void setID(int ID) {
+        this.ID = ID;
+    }
+
+    // amount
+    public double getAmount() {
+        return amount;
+    }
+    public void setAmount(double amount) {
+        this.amount = amount;
     }
 }
