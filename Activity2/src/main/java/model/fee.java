@@ -6,6 +6,7 @@ public class fee {
     private double commissionFee;
     private Date dob;
     private boolean isStudent; // 1 = student, 0 = instructor
+    private boolean paymentVerify;
 
 
     public fee(String ID) {
@@ -34,9 +35,18 @@ public class fee {
         return (0.02*coursePrice);
     }
 
-    public String payFee() {
-        String todaysDate = "20/20/2023";
-        
-        return todaysDate;
+    // payment checking process, default value of true means valid payment information
+    public boolean verifyPayment() {
+        this.paymentVerify = true;
+        return true;
+    }
+
+    // payment successful or not
+    public int payFee() {
+        if(this.paymentVerify = true) {
+            return 1;
+        } else {
+            return 0;
+        }
     }
 }
