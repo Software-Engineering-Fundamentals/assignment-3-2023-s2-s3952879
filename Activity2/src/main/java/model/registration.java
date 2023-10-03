@@ -23,5 +23,7 @@ public class registration {
     public void completeRegistration() {
         System.out.println("Registration completed successfully.");
     }
-    
+    public void failRegistration() {
+        System.out.println("Registration failed.");
+    }
 }

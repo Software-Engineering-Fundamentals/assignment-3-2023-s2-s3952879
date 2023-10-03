@@ -30,6 +30,7 @@ class Instructor {
             registration.completeRegistration();
         } else {
             System.out.println("Fee calculation failed.");
+            registration.failRegistration();
         }
     } 
 
