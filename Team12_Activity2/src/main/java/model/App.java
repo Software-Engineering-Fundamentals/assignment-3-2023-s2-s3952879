@@ -37,9 +37,26 @@ public class App {
 
         
         // ===================================================
-        // instructor registered for a course         
+        // instructor registers for a course         
 
-        // System Prompts the user for Course details
+        // System prompts for instructor details
+        System.out.println("Enter Instructor details:");
+        System.out.print("Address: ");
+        String address2 = scanner.nextLine();
+        System.out.print("Email: ");
+        String email2 = scanner.nextLine();
+        System.out.print("Phone Number: ");
+        String phoneNumber = scanner.nextLine();
+        System.out.print("Login: ");
+        String login = scanner.nextLine();
+        System.out.print("Password: ");
+        String password = scanner.nextLine();
+
+
+        // Creates an Instructor object with all the provided user input
+        Instructor instructor = new Instructor(address, email, phoneNumber, login, password);
+
+        // System prompts for course details
         System.out.println("\nEnter Course details:");
         System.out.print("Course ID: ");
         String courseID = scanner.nextLine();
@@ -58,25 +75,6 @@ public class App {
 
         // Creates a course Course object with all the provided user input
         course course = new course(courseID, courseName, courseCategory, courseIntroduction, coursePrice, courseDuration, refundAvailable);
-
-
-        // System prompts the user for Instructor details
-        System.out.println("Enter Instructor details:");
-        System.out.print("Address: ");
-        String address2 = scanner.nextLine();
-        System.out.print("Email: ");
-        String email2 = scanner.nextLine();
-        System.out.print("Phone Number: ");
-        String phoneNumber = scanner.nextLine();
-        System.out.print("Login: ");
-        String login = scanner.nextLine();
-        System.out.print("Password: ");
-        String password = scanner.nextLine();
-
-        // Creates an Instructor object with all the provided user input
-        Instructor instructor = new Instructor(address, email, phoneNumber, login, password);
-
-
 
         // Close the scanner
         scanner.close();

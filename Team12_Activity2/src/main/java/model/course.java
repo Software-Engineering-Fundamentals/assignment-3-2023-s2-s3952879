@@ -22,7 +22,7 @@ public class course {
 
 
     // getters and setter methods
-    //course IDs
+    // course IDs
     public String getCourseID() {
         return courseID;
     }

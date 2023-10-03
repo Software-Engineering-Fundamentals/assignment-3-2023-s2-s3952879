@@ -9,11 +9,11 @@ class fee {
         this.amount = amount;
     }
 
-    //calculator fee given instructor variable
+    //calculator fee given instructor variable (essentially would be one for student too)
     public double calculateFee(Instructor instructor) {
         return amount;
     }
-    // payment verification, set to true as default which is working
+    // payment verification, set to true as default which is valid payment
     public boolean verifyPayment() {
         return true;
     }

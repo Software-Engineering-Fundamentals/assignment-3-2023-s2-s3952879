@@ -59,21 +59,12 @@ class Instructor {
         this.phoneNumber = phoneNumber;
     }
 
-    // generate login and setter
-    public String generateLogin() {
-        login = "TestLogin"; // customizable or randomizable login here
-        return login;
-    }
+    // login
     public void setLogin(String login) {
         this.login = login;
     }
 
-    // generate password and setter
-    public String generatePassword() {
-        password = "TestPassword"; // customizable or randomizable login here
-        return password;
-    }
-
+    // password
     public void setPassword(String password) {
         this.password = password;
     }

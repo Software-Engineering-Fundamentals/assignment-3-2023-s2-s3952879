@@ -8,7 +8,7 @@ public class registration {
       this.course = course;
     }
     
-    // method to calcultae fee amount
+    // method to calculate fee amount
     public double checkFee(Instructor instructor) {
         fee Fee = new fee(123, 50.00);
         return Fee.calculateFee(instructor);
