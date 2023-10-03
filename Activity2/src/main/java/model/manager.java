@@ -1,29 +1,32 @@
+import java.util.*;
 
-public class manager{
-    
-    private String managerID; //unique ID to identify this manager
-    private String login; //this manager's username
-    private String password; //this manager's password
-    private String name;
+class Manager {
+  
+    // manager manage enquiry method
+    public void manageEnquiries(List<Enquiries> enquiries) {
+        Scanner scanner = new Scanner(System.in);
 
-    // constructor
-    public manager(String managerID, String name, String login, String password) {
-        this.managerID= managerID;
-        this.login = login;
-        this.password = password;
-        this.name = name;
-    }
-    
-    // provide response then post the answer
-    public void manageEnquiry(enquiry query) {
-        query.setResponse("that question was easily answered if you had simply studied the week 107 " +
-                "content for the course that test pertains to");
-        query.answer();
-    }
 
-    // close given enquiry
-    public void closeEnquiry(enquiry query) {
-        query.close();
+        for (Enquiries enquiry : enquiries) {
+            // Logic to manage the enquiry by the Manager
+            System.out.println("Enquiry received from " + enquiry.getUser().getName() + ": " + enquiry.getContents());
+            System.out.print("Do you want to respond to this enquiry now? (yes/no): ");
+            String response = scanner.nextLine().toLowerCase();
+            if (response.equals("yes")) {
+                // Manager reviews the enquiry contents and decides to answer       
+                System.out.print("Please give your response: ");  
+                enquiry.answer();
+            } else {
+               System.out.println("Enquiry ID " + enquiry.getEnquiryID() + " will be resolved later.");
+            }
+            closeEnquiry(enquiry);
+        }
     }
 
+    // enquiry is closed after a reponse has been submitted
+    public void closeEnquiry(Enquiries enquiry) {
+        // Logic to close the enquiry by the Manager
+        enquiry.close();
+        System.out.println("Enquiry ID " + enquiry.getEnquiryID() + " has been closed.");
+    }
 }

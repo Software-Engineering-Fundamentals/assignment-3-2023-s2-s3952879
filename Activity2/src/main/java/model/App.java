@@ -2,32 +2,51 @@ import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        System.out.println("Hello, World!");
-
-        // alex github test
-        System.out.println("Test");
-        // Lodge Enquiry
-
-
-        // Manager Addresses enquiry
-
-
-
-
-
 
 
         // ===================================================
-        // instructor registered for a course         
+        // user lodges and enquiry
         // scanner object for testing
         Scanner scanner = new Scanner(System.in);
 
+        // Prompt the user for input
+        System.out.print("Enter your name: ");
+        String name = scanner.nextLine();
+
+        System.out.print("Enter your address: ");
+        String address = scanner.nextLine();
+
+        System.out.print("Enter your email: ");
+        String email = scanner.nextLine();
+
+        System.out.print("Enter your contact number: ");
+        String contactNumber = scanner.nextLine();
+
+        System.out.print("Enter your emergency contact: ");
+        String emergencyContact = scanner.nextLine();
+
+        // Create a User object with user input
+        User user = new User(name, address, email, contactNumber, emergencyContact);
+        Manager manager = new Manager();
+
+        // User creates enquiries
+        user.createEnquiries(manager);
+        // ===================================================
+
+
+
+        
+        // ===================================================
+        // instructor registered for a course         
+        Scanner scanner2 = new Scanner(System.in);
+
         // System prompts the user for Instructor details
+        System.out.println("");
         System.out.println("Enter Instructor details:");
         System.out.print("Address: ");
-        String address = scanner.nextLine();
+        String address2 = scanner.nextLine();
         System.out.print("Email: ");
-        String email = scanner.nextLine();
+        String email2 = scanner.nextLine();
         System.out.print("Phone Number: ");
         String phoneNumber = scanner.nextLine();
         System.out.print("Login: ");
@@ -60,7 +79,6 @@ public class App {
 
         // Close the scanner
         scanner.close();
-
 
         // Register the course with the instructor
         // method is explained in instructor class

@@ -1,28 +1,90 @@
-import java.sql.Date;
 
-public class user {
+import java.util.*;
+
+class User {
     private String name;
     private String address;
-    private Date dob;
     private String email;
     private String contactNumber;
     private String emergencyContact;
+    private List<Enquiries> enquiries;
 
-    public user(String name, String address, Date dob, String email, String contactNumber, String emergencyContact) {
+    public User(String name, String address, String email, String contactNumber, String emergencyContact) {
         this.name = name;
         this.address = address;
-        this.dob = dob;
         this.email = email;
         this.contactNumber = contactNumber;
         this.emergencyContact = emergencyContact;
-
-
+        this.enquiries = new ArrayList<>();
     }
 
-    public enquiry createEnquiry(){
-        enquiry query = new enquiry("How were we supposed to find the answer to q95 is test #28?", email);
-        return query;
+    // create enquiry method
+
+    public void createEnquiries(Manager manager) {
+        Scanner scanner = new Scanner(System.in);
+        
+        // multiple enquiries can be made until the user types 'exit'
+        while (true) {
+            System.out.print("Enter your enquiry (or type 'exit' to finish): ");
+            String userInput = scanner.nextLine();
+            if (userInput.equalsIgnoreCase("exit")) {
+                break;
+            }
+            Enquiries enquiry = new Enquiries(userInput);
+            enquiry.setUser(this);
+            enquiries.add(enquiry);
+        }
+
+        // manager is notified about the enquiry and manages 
+        manager.manageEnquiries(enquiries);
     }
 
+    // getter and setter methods
+    public String getName() {
+        return name;
+    }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getContactNumber() {
+        return contactNumber;
+    }
+
+    public void setContactNumber(String contactNumber) {
+        this.contactNumber = contactNumber;
+    }
+
+    public String getEmergencyContact() {
+        return emergencyContact;
+    }
+
+    public void setEmergencyContact(String emergencyContact) {
+        this.emergencyContact = emergencyContact;
+    }
+
+    public List<Enquiries> getEnquiries() {
+        return enquiries;
+    }
+
+    public void setEnquiries(List<Enquiries> enquiries) {
+        this.enquiries = enquiries;
+    }
 }
