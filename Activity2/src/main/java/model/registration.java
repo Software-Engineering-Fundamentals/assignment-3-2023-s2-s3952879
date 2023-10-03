@@ -8,14 +8,16 @@ public class registration {
       this.course = course;
     }
     
+    // method to calcultae fee amount
     public double checkFee(Instructor instructor) {
-        Fee fee = new Fee(123, 50.00);
-        return fee.calculateFee(instructor);
+        fee Fee = new fee(123, 50.00);
+        return Fee.calculateFee(instructor);
     }
 
+    // method to verify payment status
     public boolean checkPaymentStatus(){
-      Fee fee = new Fee(123, 50.00);
-      return fee.verifyPayment();
+      fee Fee = new fee(123, 50.00);
+      return Fee.verifyPayment();
     }
 
     public void completeRegistration() {

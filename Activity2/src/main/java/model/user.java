@@ -24,9 +24,5 @@ public class user {
         return query;
     }
 
-    public void registerCourse() {
-        
-
-    }
 
 }

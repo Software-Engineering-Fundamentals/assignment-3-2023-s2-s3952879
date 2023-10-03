@@ -1,10 +1,10 @@
 import java.util.Date;
 
-class Fee {
+class fee {
     private int ID;
     private double amount;
 
-    public Fee(int ID, double amount) {
+    public fee(int ID, double amount) {
         this.ID = ID;
         this.amount = amount;
     }

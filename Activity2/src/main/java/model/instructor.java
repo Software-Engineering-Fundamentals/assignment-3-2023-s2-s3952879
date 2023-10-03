@@ -1,7 +1,4 @@
-import java.nio.charset.Charset;
-import java.util.Random;
 import java.util.ArrayList;
-import java.util.Date;
 
 class Instructor {
     private String address;
@@ -19,8 +16,12 @@ class Instructor {
         this.password = password;
     }
 
-    public void registerCourse(Course course) {
-        Registration registration = new Registration(this, course);
+    // creates registration object
+    // checks fee price based on current object (instructor)
+    // payment verification in checkpaymentStatus
+    // returned boolean is then checked for true or false payment verification
+    public void registerCourse(course course) {
+        registration registration = new registration(this, course);
         double feeAmount = registration.checkFee(this);
         boolean isPaid = registration.checkPaymentStatus();
 
@@ -59,6 +60,7 @@ class Instructor {
 
     // generate login and setter
     public String generateLogin() {
+        login = "TestLogin"; // customizable or randomizable login here
         return login;
     }
     public void setLogin(String login) {
@@ -67,6 +69,7 @@ class Instructor {
 
     // generate password and setter
     public String generatePassword() {
+        password = "TestPassword"; // customizable or randomizable login here
         return password;
     }
 
