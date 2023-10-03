@@ -3,12 +3,12 @@ import java.sql.Date;
 public class user {
     private String name;
     private String address;
-    private String dob;
+    private Date dob;
     private String email;
     private String contactNumber;
     private String emergencyContact;
 
-    public user(String name, String address, String dob, String email, String contactNumber, String emergencyContact) {
+    public user(String name, String address, Date dob, String email, String contactNumber, String emergencyContact) {
         this.name = name;
         this.address = address;
         this.dob = dob;
